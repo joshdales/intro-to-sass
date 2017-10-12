@@ -3,6 +3,8 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 $my_red: #990000;
 $slightly_grey: #999;
+$main_fonts: 'Source Sans Pro', Helvetica, Arial, sans-serif;
+$heading_fonts: 'Oswald', Helvetica, Arial, sans-serif;
 
 *,
 *::before,
@@ -12,7 +14,7 @@ $slightly_grey: #999;
 
 html {
   box-sizing: inherit;
-  font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif;
+  font-family: $main_fonts;
   font-size: 20px;
   line-height: 1.35;
   height: 100%;
@@ -29,7 +31,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'Oswald', Helvetica, Arial, sans-serif;
+  font-family: $heading_fonts;
   // font-weight: 700;
   line-height: 1.1;
 }
@@ -45,10 +47,9 @@ figure {
 article {
   width: 75%;
   margin: 1rem auto 3rem;
-}
-
-article > header {
-  overflow: auto;
+  header {
+    overflow: auto;
+  }
 }
 
 .home {
@@ -66,45 +67,40 @@ article > header {
   float: left;
   width: 25%;
   padding: 1rem;
-}
-
-.hero-logo-container > .hero-logo {
-  display: block;
-  width: 150px;
-  margin: auto;
+  .hero-logo {
+    display: block;
+    width: 150px;
+    margin: auto;
+  }
 }
 
 .hero-title-container {
   float: left;
   width: 75%;
-}
-
-.hero-title-container > .hero-title {
-  font-size: 3rem;
-  margin: 2rem 0 0;
-  color: $my_red;
-}
-
-.hero-title-container > .hero-tagline {
-  color: $slightly_grey;
-  margin: 0.25rem 0;
+  .hero-title {
+    font-size: 3rem;
+    margin: 2rem 0 0;
+    color: $my_red;
+  }
+  .hero-tagline {
+    color: $slightly_grey;
+    margin: 0.25rem 0;
+  }
 }
 
 .article-poster {
-    float: left;
-    width: 25%;
-    margin-right: 1.5rem;
-}
-
-.article-title > h2 {
+  float: left;
+  width: 25%;
+  margin-right: 1.5rem;
+  h1 {
+      font-size: 2rem;
+      margin-bottom: 0;
+      color: $my_red;
+  }
+  h2 {
     font-size: 1.2em;
     color: $slightly_grey;
-}
-
-.article-title > h1 {
-    font-size: 2rem;
-    margin-bottom: 0;
-    color: $my_red;
+  }
 }
 
 // This mixin provides a fancier clearfix than using the overflow property!
