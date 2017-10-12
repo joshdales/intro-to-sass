@@ -3,52 +3,8 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 @import 'variables';
 @import 'mixins';
+@import 'base';
 
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-
-html {
-  box-sizing: inherit;
-  font-family: $main_fonts;
-  font-size: 20px;
-  line-height: 1.35;
-  height: 100%;
-}
-
-body {
-  margin: 0;
-  height: 100%;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: $heading_fonts;
-  // font-weight: 700;
-  line-height: 1.1;
-}
-
-img {
-  max-width: 100%;
-}
-
-figure {
-  margin: 0;
-}
-
-article {
-  width: 75%;
-  margin: 1rem auto 3rem;
-  header {
-    @include clearfix;
-  }
-}
 
 .home {
   height: 100%;
